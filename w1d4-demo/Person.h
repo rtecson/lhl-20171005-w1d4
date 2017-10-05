@@ -12,7 +12,7 @@
 
 @property (nonatomic, strong) NSString *name;
 
-//- (NSString *)name;                 // Getter
-//- (void)setName:(NSString *)name;   // Setter
-//
+- (NSString *)name;                 // Getter
+- (void)setName:(NSString *)name;   // Setter
+
 @end
