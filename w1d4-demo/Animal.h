@@ -7,7 +7,27 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Person.h"
 
-@interface Animal : NSObject
+@class ReportCard;
+
+@protocol TrashTakerDelegate<NSObject>
+- (void)takeOutTrash;
+@optional
+- (void)takeOutCompost;
+@end
+
+
+@interface Animal : NSObject <VehicleDriver, TrashTakerDelegate>
+
+@property (readonly, nonatomic) int numberOfLegs;
+@property NSString *name;
+@property (strong, nonatomic) Person *owner;
+
+@property (weak, nonatomic) ReportCard *reportCard;
+
+@property id<VehicleDriver> driver;
+
+- (void)takeOutTrash;
 
 @end

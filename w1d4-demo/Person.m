@@ -24,4 +24,14 @@
     _name = name;
 }
 
+- (void)cleanHouse
+{
+    // Sweep floor
+    // Wash dishes
+    [self.trashTaker1 takeOutTrash];
+    if ([self.trashTaker1 respondsToSelector:@selector(takeOutCompost)]) {
+        [self.trashTaker1 takeOutCompost];
+    }
+}
+
 @end
